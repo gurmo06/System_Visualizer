@@ -14,7 +14,7 @@ export class CPU
     }
 
     // Returns a read-only snapshot of the current CPU state
-    public current_state(): readonly CPUState
+    public current_state(): Readonly<CPUState>
     {
         // Return a copy to prevent external mutation
         return { regs: [...this.state.regs], pc: this.state.pc, halt: this.state.halt };
