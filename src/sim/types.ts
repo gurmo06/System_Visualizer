@@ -13,5 +13,5 @@ export interface CPUState
 {
     regs: number[];    // Array of registers (X0 - X30) and XZR/SP (X31)
     pc: number;             // Program counter
-    stall: boolean;         // Indicates if the CPU is stalled
+    halt: boolean;         // Indicates if the CPU is stalled (temporary)
 }
