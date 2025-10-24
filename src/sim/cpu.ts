@@ -35,11 +35,11 @@ export class CPU
     // Executes a single instruction cycle
     public step(): void
     {
-        // If stalled, do nothing
+        // If halted, do nothing
         if (this.state.halt)
             { return; }
 
-        // If PC is out of bounds, stall the CPU
+        // If PC is out of bounds, halt the CPU
         if (this.state.pc < 0 || this.state.pc >= this.program.length)
             { this.state.halt = true; return; }
         
