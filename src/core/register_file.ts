@@ -83,7 +83,6 @@ export class RegisterFile
         }
     }
 
-
     /*-------------------------- Debug ---------------------------*/
 
     /* Dump all register values as an array */

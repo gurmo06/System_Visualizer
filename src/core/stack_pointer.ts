@@ -18,7 +18,7 @@ export class StackPointer
 
     /*---------------- Read Ports (Combinational) ----------------*/
 
-    /* Combinational read. */
+    /* Combinational read */
     read(): Word
     {
         return this.sp;
@@ -26,8 +26,7 @@ export class StackPointer
 
     /*----------------- Write Ports (Sequential) -----------------*/
 
-
-    /* Sequential: commit on clock edge. */
+    /* Sequential: commit on clock edge */
     commit(next: Word): void
     {
         // Assert 16-byte alignment
@@ -36,5 +35,13 @@ export class StackPointer
             throw new Error("SP not 16-byte aligned");
         }
         this.sp = next;
+    }
+
+    /*-------------------------- Debug ---------------------------*/
+
+    /* Get current SP value */
+    snapshot(): Word
+    {
+        return this.sp;
     }
 }
