@@ -82,4 +82,19 @@ export class RegisterFile
             this.regs[reqW.idx] = reqW.data;
         }
     }
+
+
+    /*-------------------------- Debug ---------------------------*/
+
+    /* Dump all register values as an array */
+    snapshot(): readonly Word[]
+    {
+        return this.regs.slice();
+    }
+
+    /* Peek at a specific register value */
+    peek(idx: RegIndex): Word
+    {
+        return this.regs[idx];
+    }
 }

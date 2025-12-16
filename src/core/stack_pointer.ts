@@ -16,11 +16,16 @@ export class StackPointer
     /* Internal SP storage */
     private sp: Word = 0n;
 
+    /*---------------- Read Ports (Combinational) ----------------*/
+
     /* Combinational read. */
     read(): Word
     {
         return this.sp;
     }
+
+    /*----------------- Write Ports (Sequential) -----------------*/
+
 
     /* Sequential: commit on clock edge. */
     commit(next: Word): void
