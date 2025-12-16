@@ -8,7 +8,7 @@
   * - Enforce 16-byte alignment on writes (AAPCS64).
   */
 
-export type Word = bigint;
+export type Word = bigint;              // 64-bit
 
 /* Stack Pointer */
 export class StackPointer
@@ -21,7 +21,7 @@ export class StackPointer
     /* Combinational read */
     read(): Word
     {
-        return this.sp;
+        return this.sp;                 // 64-bit
     }
 
     /*----------------- Write Ports (Sequential) -----------------*/
